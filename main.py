@@ -55,7 +55,7 @@ def get_weather(region):
     # 天气
     weather = response["now"]["text"]
     # 当前温度
-    temp = response["now"]["temp"] + u"\N{DEGREE SIGN}" + "C"
+    temp = response["now"]["temp"]
     # 风向
     wind_dir = response["now"]["windDir"]
     return weather, temp, wind_dir
@@ -146,7 +146,7 @@ def send_message(to_user, access_token, region_name, weather, temp, wind_dir, no
                 "color": get_color()
             },
             "region": {
-                "value": region_name,
+                "value": "贵阳市",
                 "color": get_color()
             },
             "weather": {
