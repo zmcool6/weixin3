@@ -50,7 +50,7 @@ def get_weather(region):
     else:
         # 获取地区的location--id
         location_id = response["location"][0]["id"]
-    weather_url = "https://devapi.qweather.com/v7/weather/now?location={}&key={}".format(location_id, key)
+    weather_url = "https://devapi.qweather.com/v7/weather/now?location=101260101&key=654cae8e9aee4087aedeec972e923ba5"
     response = get(weather_url, headers=headers).json()
     # 天气
     weather = response["now"]["text"]
